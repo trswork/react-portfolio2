@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
-import Navigation from "./Navigation";
-import About from "./About";
-import Contact from "./Contact";
-import Portfolio from "./Portfolio";
-import Resume from "./Resume";
+import Nav from './Nav';
+import About from './About';
+import Contact from './Contact';
+import Portfolio from './Portfolio';
+import Resume from './Resume';
 
 function Header() {
-  const [currentPage, handlePageChange] = useState("About");
+  const [currentPage, handlePageChange] = useState('About');
 
   const renderPage = () => {
     switch (currentPage) {
       case "About":
         return <About />;
-      case "Portfolio":
+      case 'Portfolio':
         return <Portfolio />;
-      case "Contact":
+      case 'Contact':
         return <Contact />;
-      case "Resume":
+      case 'Resume':
         return <Resume />;
 
       default:
