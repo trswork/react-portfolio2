@@ -1,18 +1,6 @@
-import React from 'react';
-import Nav from './components/Nav';
-import About from './components/About';
-import Portfolio from "./components/Portfolio";
+import React from "react";
+import PortfolioContainer from "./components/PortfolioContainer";
 
-function App() {
-  return (
-    <div>
-      <Nav></Nav>
-      <main>
-        <About>About Me</About>
-        <Portfolio>Portfolio</Portfolio>
-      </main>
-    </div>
-  );
-}
+const App = () => <PortfolioContainer />;
 
 export default App;
