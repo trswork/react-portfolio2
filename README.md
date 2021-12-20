@@ -8,6 +8,11 @@ AS AN employer looking for candidates with experience building single-page appli
 I WANT to view a potential employee's deployed React portfolio of work samples
 SO THAT I can assess whether they're a good candidate for an open position
 
+## Screenshots
+
+![image](https://user-images.githubusercontent.com/87744214/146716632-b05d2c18-bd50-4004-b9d7-42bc2af281d4.png)
+
+
 ## Installation
 
 In the project directory, you can run:
