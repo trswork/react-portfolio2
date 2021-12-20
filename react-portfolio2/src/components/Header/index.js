@@ -1,16 +1,45 @@
-import React from 'react';
-import { Navbar } from 'react-bootstrap';
+import React, { useState } from 'react';
+import Navigation from "./Navigation";
+import About from "./About";
+import Contact from "./Contact";
+import Portfolio from "./Portfolio";
+import Resume from "./Resume";
 
 function Header() {
+  const [currentPage, handlePageChange] = useState("About");
 
-    return (
-        <header className="flex-row px-1">
-        <div>    
-        <h1>Tenee R</h1>
-        <Navbar></Navbar>
+  const renderPage = () => {
+    switch (currentPage) {
+      case "About":
+        return <About />;
+      case "Portfolio":
+        return <Portfolio />;
+      case "Contact":
+        return <Contact />;
+      case "Resume":
+        return <Resume />;
+
+      default:
+        return <About />;
+    }
+  };
+
+  return (
+    <div>
+      <nav className="navbar">
+        <div className="navbar-brand">
+            <span className="content is-large">Tenee R</span>
         </div>
-        </header>
-    );
+      </nav>
+      <Nav
+        currentPage={currentPage}
+        handlePageChange={handlePageChange}
+      />
+      <main>
+        <div>{renderPage(currentPage)}</div>
+      </main>
+    </div>
+  );
 }
 
 export default Header;
